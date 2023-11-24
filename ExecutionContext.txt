@@ -1,0 +1,9 @@
+Understanding the Execution Context
+Execution Context is like a container which holds two phases:
+> Memory Allocation Phase(variable environment)
+> Code Execution phase
+The whole process of execution Context is managed by the JS engine with the help of its own call stack or Execution Context Stack. 
+Call Stack maintains the order of execution of execution context. 
+In EC there will be only one GlobalEC and another for the function invocation(the number of local will depend on number of functions present in the code). 
+These local ECs will immediately pop out when they are done with their execution.
+GEC will delete only after the whole code execution is done.
