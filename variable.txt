@@ -1,0 +1,108 @@
+📌JavaScript Variable!!!
+
+🤼 Variables in JavaScript.
+↪There are three ways to declare the variables in JS which are var, let and const where let and const are mainly used(reason we discuss next).
+
+1️⃣var: Old way of declaring variables.
+▶ SCOPE(where variables are available for use): var variables are globally scoped or function(locally)scoped.
+
+ > Global Scope: variable is declared outside a function(can be accessed in whole code or window).
+ > Function Scope: variable is declared within a function(can be accessed only in function)
+
+▶ EXAMPLE:
+ > For global scope:
+var x=5;
+function abc(){
+ console.log("Hello!");
+}
+function xyz(){
+ console.log(x);
+ console.log("Hello World!!!");
+}
+console.log(x); // 5
+abc();  // Hello!
+xyz();  //5 Hello World!!!
+
+ > For function(local) scope:
+function mainFun(){
+ var x=20;
+ console.log(x);
+}
+mainFun(); //10
+console.log(x); //Error:x is not defined
+
+▶ 'var' variables can be updated and re-declared.
+Eg.:
+var x=200;
+x=30;  //updated✅ 
+
+var x=10;
+var x=1000;  //re-declared✅ 
+Both will execute without getting any error message.
+
+▶ HOISTING: 'var' declarations are hoisted to the top of their scope and initialized with a value of Undefined.
+Eg.:
+console.log(x);
+var x=100;
+
+var a;
+console.log(a);
+a=200;
+Both will print the undefined without any error message.
+
+
+2️⃣let: New way of declaring variables.
+▶ SCOPE: let variables are block scope.
+
+ > Block Scope: A block is preferred as a chunk of code limited by { }.
+ > Anything present in curly braces is block-scoped.
+
+▶ EXAMPLE:
+let dev=10;
+if(dev<11){
+ let devMsg="You are in TOP TEN!";
+ console.log(devMsg); //You are in TOP TEN!
+}
+console.log(devMsg); //Error:devMsg is not defined
+
+▶ 'let' variables can be updated but not re-declared.
+Example:
+let x=200;
+x=30;  //updated✅ 
+
+let x=10;
+let x=1000;  // Error: Identifier 'x' has already been declared❎ 
+
+▶ HOISTING: 'let' declarations are hoisted to the top but not initialized. so, whenever we use let variables before declaration, we will get a "Reference Error". 
+
+
+3️⃣const: New way of declaring variables(use to maintain constant values).
+▶ SCOPE: const variables are block scope.
+▶ 'const' variables cannot be updated or re-declared.
+▶ EXAMPLE:
+const x="Hi";
+x="Hello";  //Error:Assignment to constant variable❎
+
+const x=10;
+const x=1;  //Error:Identifier 'x' has already been declared❎
+
+▶ In 'const' the behaviour of updating and re-declaring is different when Objects come( we can't update the const object but we can update its properties).
+
+Eg.:
+const abc={
+ a:10,
+ b:20,
+ c:30
+}
+
+❎Not accepted this👇
+abc={
+ x:1,
+ y:2,
+ z:3
+}
+
+✅But, updating its properties🤙
+abc.b=200;
+
+▶ HOISTING: 'const' declarations are hoisted to the top but not initialized.

@@ -1,0 +1,18 @@
+📌JavaScript!!!
+
+🤷‍♀️What is JavaScript(Basic Overview)❓
+↪JS is a synchronous single-threaded language.
+↪It is a scripting language because of its well-known definition and it is an interpreted language because of its execution process in web browsers.
+
+ > Scripting Language (writing a script file that automates any task).
+ > Interpreted Language (executing a code line-by-line).
+
+↪This is synchronous but does all stuff which comes under the asynchronous mechanism.
+↪JS is a Loosely typed and Dynamically typed language.
+
+⚡GENERAL KNOWLEDGE⚡
+ > JavaScript was invented by Brendan Eich in 1995.
+ > Old JS versions are named by numbers.
+ ex.: ES5(2009), ES6(2015)
+ > From 2016, versions are named by year.
+ ex.: ECMAScript 2016, 2017, 2018,2019,...
