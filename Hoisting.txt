@@ -1,0 +1,27 @@
+📌Hoisting in JavaScript!!!
+
+▶ Hoisting is a phenomenon where we can access or use variables and functions even before their initialization. It is a default behaviour of JavaScript.
+
+👽NOTE:
+➡JavaScript only hoists declarations, not initializations.
+➡In the case of function expressions, the assignment is not hoisted, so attempting to call the function before the assignment would result in a TypeError.
+Eg.:
+funCall(); // TypeError
+
+var funCall = function() {
+ console.log("I'm calling you!");
+};
+
+➡In the case of 'let' and 'const' are hoisted to the top of the block, but not initialized (the block of code is aware of the variable, but it cannot be used until it has been declared).
+
+Eg.:
+num = 5;
+let num; //ReferenceError
+✅Until the variable 'num' is not declared it goes to the TDZ(temporal dead zone) from the start of the block:
+&
+
+num = 5;
+const num; //this will not run
+
+Thank You! 🙌
+
