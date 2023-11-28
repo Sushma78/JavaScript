@@ -1,3 +1,2 @@
-# JavaScript
-# JavaScript
-# JavaScript
+In-Short Everything!
+
